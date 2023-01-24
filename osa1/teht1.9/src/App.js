@@ -2,6 +2,12 @@ import { useState } from 'react'
 
 // Palaute step4
 // oikea paikka komponentin määrittelyyn
+const NoFeedback = () => {
+  return (
+    <p>No feedback given</p>
+  )
+}
+
 const Statistics = (props) => {
   const all = props.good + props.neutral + props.bad
   const average = (props.good - props.bad) / all
@@ -25,6 +31,9 @@ const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
+  const isVisible = good + neutral + bad
+
+
   return (
     <div>
       <h1>give feedback</h1>
@@ -42,7 +51,9 @@ const App = () => {
       </button>
 
       <h1>statistics</h1>
-      <Statistics good = {good} neutral = {neutral} bad = {bad} />
+      {isVisible ? <Statistics good={good} neutral={neutral} bad={bad} /> : <NoFeedback />}
+
+
     </div>
   )
 }

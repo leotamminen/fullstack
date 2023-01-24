@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+// Palaute step1
 const App = () => {
   // tallenna napit omaan tilaansa
   const [good, setGood] = useState(0)
@@ -26,7 +27,7 @@ const App = () => {
 
       <div>good {good}</div>
       <div>neutral {neutral}</div>
-      <div>neutral {bad}</div>
+      <div>bad {bad}</div>
 
     </div>
   )

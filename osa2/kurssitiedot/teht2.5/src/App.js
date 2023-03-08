@@ -1,5 +1,6 @@
 import Course from './Course'
 
+// Course omassa moduulissaan ja importataan se.
 const App = () => {
   const courses = [
     {

@@ -56,12 +56,12 @@ const App = () => {
 
       <Filter filterValue={filterValue} handleFilterChange={handleFilterChange} />
 
-      <h2>add a new</h2>
+      <h3>Add a new</h3>
 
       <PersonForm addPerson={addPerson} newName={newName} handleNameChange={handleNameChange}
       newNumber={newNumber} handleNumberChange={handleNumberChange}/>
 
-      <h2>Numbers</h2>
+      <h3>Numbers</h3>
       
       <Persons filterPersons = {filterPersons}/>
     </div>

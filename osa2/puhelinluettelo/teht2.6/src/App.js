@@ -17,7 +17,7 @@ const App = () => {
     setNewName('')
   }
 
-  const handleNoteChange = (event) => {
+  const handleNameChange = (event) => {
     console.log(event.target.value)
     setNewName(event.target.value)
   }
@@ -29,7 +29,7 @@ const App = () => {
         <div>
           name: <input 
           value={newName}
-          onChange={handleNoteChange}
+          onChange={handleNameChange}
           />
         </div>
         <div>
